@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ns="urn:beans.examples.eroshenkoam.me"
+           targetNamespace="urn:beans.examples.eroshenkoam.me"
+           version="2.1">
+
+    <xs:element name="weather" type="ns:Weather"/>
+
+    <xs:complexType name="Weather">
+        <xs:sequence>
+            <xs:element name="url" type="xs:long"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="temperature" type="ns:Temperature"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Temperature">
+        <xs:sequence>
+            <xs:element name="day" type="xs:int"/>
+            <xs:element name="night" type="xs:int"/>
+            <xs:element name="current" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
