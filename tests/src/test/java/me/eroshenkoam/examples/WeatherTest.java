@@ -21,7 +21,7 @@ public class WeatherTest {
     private CommonUserSteps commonUserSteps;
 
     @Before
-    public void initPages() {
+    public void initSteps() {
         commonUserSteps = new CommonUserSteps(webDriverRule.getDriver());
     }
 
